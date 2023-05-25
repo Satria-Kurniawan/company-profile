@@ -7,7 +7,13 @@ export default function About() {
       <SectionHeader title="Tentang" subtext="Profil pemilik usaha." />
       <section className="md:flex gap-x-10 mt-16">
         <div className="md:w-[40%]">
-          <img src={ProfilePict} alt="profile" className="rounded-2xl" />
+          <img
+            src={ProfilePict}
+            alt="profile"
+            className="rounded-2xl"
+            width="640"
+            height="360"
+          />
         </div>
         <div className="md:w-[60%] md:mt-32 mt-10">
           <h1 className="md:text-4xl text-2xl font-bold mb-3">
