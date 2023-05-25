@@ -6,6 +6,7 @@
 @font-face {
   font-family: "MotoGPDisplay";
   src: url("./assets/fonts/MotoGP_Display_Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 html,
