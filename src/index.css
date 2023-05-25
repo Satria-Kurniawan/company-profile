@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "MotoGPDisplay";
+  src: url("./assets/fonts/MotoGP_Display_Bold.ttf") format("truetype");
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fcfcfc;
+  color: "#292929";
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+.ham8 .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.ham8.active .top {
+  stroke-dashoffset: -64px;
+}
+.ham8.active .middle {
+  /* stroke-dashoffset: -20px; */
+  transform: rotate(90deg);
+}
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
+}
+
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-green-300 to-purple-400;
+}
+
+.brand-font {
+  font-family: "MotoGPDisplay", sans-serif;
+}
+
+.gradient-1 {
+  @apply bg-gradient-to-r from-green-300 to-purple-400;
+  width: 12rem;
+  height: 12rem;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  filter: blur(120px);
+}
+
+.gradient-2 {
+  @apply bg-gradient-to-r from-violet-300 to-purple-400;
+  width: 12rem;
+  height: 12rem;
+  position: fixed;
+  top: 70%;
+  right: 0;
+  filter: blur(120px);
+}
+
+@media screen and (max-width: 768px) {
+  .gradient-1,
+  .gradient-2 {
+    filter: blur(50px);
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
