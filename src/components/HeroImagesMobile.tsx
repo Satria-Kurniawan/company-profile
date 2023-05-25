@@ -9,19 +9,22 @@ export default function HeroImagesMobile() {
         <img
           src={Img1}
           alt="Laptop"
-          width={280}
+          width="280"
+          height="157.5"
           className="rounded-xl rounded-r-none row-span-2 h-full"
         />
         <img
           src={Img2}
           alt="Laptop"
-          width={280}
+          width="280"
+          height="157.5"
           className="rounded-xl rounded-l-none"
         />
         <img
           src={Img3}
           alt="Laptop"
-          width={280}
+          width="280"
+          height="157.5"
           className="rounded-xl rounded-l-none"
         />
       </section>

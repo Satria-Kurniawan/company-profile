@@ -34,49 +34,50 @@ export default function Hero() {
         <img
           src={Img1}
           alt="Laptop"
-          width={280}
+          width="280"
+          height="157.5"
           className="rounded-xl absolute left-1/2 -translate-x-1/2"
         />
         <img
           src={Img2}
           alt="Laptop"
-          width={160}
-          height={160}
+          width="160"
+          height="284.444444444"
           className="rounded-xl absolute left-[29%] -translate-x-1/2 translate-y-[40%] h-44"
         />
         <img
           src={Img3}
           alt="Laptop"
-          width={160}
-          height={160}
+          width="160"
+          height="90"
           className="rounded-xl absolute left-[29%] -translate-x-1/2 translate-y-[250%]"
         />
         <img
           src={Img4}
           alt="Laptop"
-          width={160}
-          height={160}
+          width="160"
+          height="284.444444444"
           className="rounded-xl absolute right-[29%] translate-x-1/2 translate-y-[40%] h-44"
         />
         <img
           src={Img5}
           alt="Laptop"
-          width={160}
-          height={160}
+          width="160"
+          height="90"
           className="rounded-xl absolute right-[29%] translate-x-1/2 translate-y-[250%]"
         />
         <img
           src={Img6}
           alt="Laptop"
-          width={160}
-          height={160}
+          width="160"
+          height="284.444444444"
           className="rounded-xl absolute left-[13%] -translate-x-1/2 translate-y-[80%] h-48"
         />
         <img
           src={Img7}
           alt="Laptop"
-          width={160}
-          height={160}
+          width="160"
+          height="284.444444444"
           className="rounded-xl absolute right-[13%] translate-x-1/2 translate-y-[80%] h-48"
         />
       </section>
