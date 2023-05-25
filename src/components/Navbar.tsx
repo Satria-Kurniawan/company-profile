@@ -52,7 +52,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
             >
               <li
                 key={i}
-                className={`relative cursor-pointer py-2 px-3 hover:bg-gray-50 dark:hover:text-primary ${
+                className={`relative cursor-pointer py-2 px-3 font-medium hover:bg-gray-50 dark:hover:text-primary ${
                   activeMenu === menu.name &&
                   "bg-gradient-primary bg-clip-text text-transparent"
                 }`}

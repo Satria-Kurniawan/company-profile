@@ -7,6 +7,7 @@ import Img5 from "../assets/images/close-up-circuit-board-repair.webp";
 import Img6 from "../assets/images/pexels-anna-shvets-3987020.webp";
 import Img7 from "../assets/images/pexels-cottonbro-studio-4065906.webp";
 import HeroImagesMobile from "./HeroImagesMobile";
+import { Link } from "react-scroll";
 
 export default function Hero() {
   return (
@@ -26,8 +27,12 @@ export default function Hero() {
           dan terpercaya dengan sentuhan magis dari kami.
         </p>
         <div className="flex gap-x-2 justify-center mt-5">
-          <Button variant="primary" text="Let's Go" />
-          <Button variant="secondary" text="Hubungi" />
+          <Link to="layanan" smooth={true} offset={-80}>
+            <Button variant="primary" text="Let's Go" />
+          </Link>
+          <Link to="kontak" smooth={true} offset={-80}>
+            <Button variant="secondary" text="Hubungi" />
+          </Link>
         </div>
       </section>
       <section className="relative md:block hidden">

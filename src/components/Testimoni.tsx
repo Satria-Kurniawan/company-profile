@@ -17,12 +17,12 @@ export default function Testimoni() {
     {
       avatar: "https://img.freepik.com/free-icon/user_318-159711.jpg",
       customer: "Uciha Madara",
-      text: "Kecepatan layanannya luar biasa! Saya mengirimkan smartphone yang rusak dan dalam waktu singkat, mereka berhasil memperbaikinya dengan hasil yang memuaskan. Saya sangat terkesan dengan keahlian dan ketepatannya",
+      text: "Tim servis sangat profesional dan efisien dalam menangani masalah pada gadget saya. Mereka dengan cepat mendiagnosis masalah yang terjadi pada perangkat saya dan memberikan penjelasan yang jelas tentang langkah-langkah yang akan diambil untuk memperbaikinya.",
     },
     {
       avatar: "https://img.freepik.com/free-icon/user_318-159711.jpg",
       customer: "Uciha Itachi",
-      text: "Kecepatan layanannya luar biasa! Saya mengirimkan smartphone yang rusak dan dalam waktu singkat, mereka berhasil memperbaikinya dengan hasil yang memuaskan. Saya sangat terkesan dengan keahlian dan ketepatannya",
+      text: "Tim servis memberikan pelayanan pelanggan yang ramah dan responsif, menjawab semua pertanyaan dan kekhawatiran saya dengan sabar. Secara keseluruhan, saya sangat merekomendasikan servis gadget ini kepada siapa pun yang membutuhkan.",
     },
   ];
 
