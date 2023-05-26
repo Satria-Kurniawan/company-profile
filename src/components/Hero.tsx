@@ -8,6 +8,7 @@ import Img6 from "../assets/images/pexels-anna-shvets-3987020.webp";
 import Img7 from "../assets/images/pexels-cottonbro-studio-4065906.webp";
 import HeroImagesMobile from "./HeroImagesMobile";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -35,55 +36,68 @@ export default function Hero() {
           </Link>
         </div>
       </section>
-      <section className="relative md:block hidden">
-        <img
-          src={Img1}
-          alt="Laptop"
-          width="280"
-          height="157.5"
-          className="rounded-xl absolute left-1/2 -translate-x-1/2"
-        />
-        <img
-          src={Img2}
-          alt="Laptop"
-          width="160"
-          height="284.444444444"
-          className="rounded-xl absolute left-[29%] -translate-x-1/2 translate-y-[40%] h-44"
-        />
-        <img
-          src={Img3}
-          alt="Laptop"
-          width="160"
-          height="90"
-          className="rounded-xl absolute left-[29%] -translate-x-1/2 translate-y-[250%]"
-        />
-        <img
-          src={Img4}
-          alt="Laptop"
-          width="160"
-          height="284.444444444"
-          className="rounded-xl absolute right-[29%] translate-x-1/2 translate-y-[40%] h-44"
-        />
-        <img
-          src={Img5}
-          alt="Laptop"
-          width="160"
-          height="90"
-          className="rounded-xl absolute right-[29%] translate-x-1/2 translate-y-[250%]"
-        />
+      <section className="flex gap-x-3 items-center w-fit mx-auto">
         <img
           src={Img6}
           alt="Laptop"
           width="160"
           height="284.444444444"
-          className="rounded-xl absolute left-[13%] -translate-x-1/2 translate-y-[80%] h-48"
+          className="rounded-xl h-48"
         />
+        <div className="flex flex-col gap-y-3">
+          <img
+            src={Img2}
+            alt="Laptop"
+            width="160"
+            height="284.444444444"
+            className="rounded-xl h-44"
+          />
+          <img
+            src={Img3}
+            alt="Laptop"
+            width="160"
+            height="90"
+            className="rounded-xl"
+          />
+        </div>
+        <img
+          initial={{ y: "-100%" }}
+          animate={{ y: 0 }}
+          transition={{
+            type: "spring",
+            duration: 1,
+            delay: 0.5,
+            stiffness: 300,
+            damping: 10,
+          }}
+          src={Img1}
+          alt="Laptop"
+          width="280"
+          height="157.5"
+          className="rounded-xl"
+        />
+        <div className="flex flex-col gap-y-3">
+          <img
+            src={Img4}
+            alt="Laptop"
+            width="160"
+            height="284.444444444"
+            className="rounded-xl h-44"
+          />
+          <img
+            src={Img5}
+            alt="Laptop"
+            width="160"
+            height="90"
+            className="rounded-xl"
+          />
+        </div>
         <img
           src={Img7}
           alt="Laptop"
           width="160"
           height="284.444444444"
-          className="rounded-xl absolute right-[13%] translate-x-1/2 translate-y-[80%] h-48"
+          className="rounded-xl h-48"
         />
       </section>
       <HeroImagesMobile />

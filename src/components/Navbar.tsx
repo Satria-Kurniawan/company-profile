@@ -33,7 +33,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
 
   return (
     <nav
-      className={`sticky top-0 md:backdrop-blur-none backdrop-blur-md py-3 z-50 ${
+      className={`sticky top-0 backdrop-blur-md py-3 z-50 ${
         mobileMenuOpen && "md:h-fit h-screen"
       }`}
     >
