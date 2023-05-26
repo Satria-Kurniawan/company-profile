@@ -58,6 +58,11 @@ export default function Services() {
   };
 
   const serviceItem = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const benefitItem = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
   };
@@ -71,14 +76,28 @@ export default function Services() {
       <section className="md:flex gap-x-5 mt-16">
         <div className="w-full md:mb-0 mb-5">
           <h1 className="text-xl font-bold mb-5">Melayani</h1>
-          <ul className="flex flex-col gap-y-3 mb-5">
+          <motion.ul
+            variants={serviceContainer}
+            initial="hidden"
+            whileInView="visible"
+            className="flex flex-col gap-y-3 mb-5"
+          >
             {services.map((service, i) => (
-              <li key={i} className="flex gap-x-3 items-center">
+              <motion.li
+                variants={serviceItem}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 10,
+                }}
+                key={i}
+                className="flex gap-x-3 items-center"
+              >
                 <IoShieldCheckmarkSharp size={20} color="#58F89E" />
                 <span className="font-medium">{service.name}</span>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
           <Link to="kontak" smooth={true} offset={-80}>
             <Button variant="primary" text="Gaskan" />
           </Link>
@@ -92,7 +111,7 @@ export default function Services() {
         >
           {Benefits.map((benefit, i) => (
             <motion.div
-              variants={serviceItem}
+              variants={benefitItem}
               transition={{
                 type: "spring",
                 stiffness: 300,

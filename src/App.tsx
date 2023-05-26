@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Testimoni from "./components/Testimoni";
 import DocumentMeta from "react-document-meta";
+import { LazyMotion, domAnimation } from "framer-motion";
 
 export default function App() {
   const [theme, setTheme] = useState<string>("light");
@@ -37,18 +38,20 @@ export default function App() {
 
   return (
     <DocumentMeta {...meta}>
-      <main className={`dark:bg-dark dark:text-light`}>
-        <Navbar theme={theme} setTheme={setTheme} />
-        <section className="container mx-auto md:px-20 px-5">
-          <div className="gradient-1" />
-          <div className="gradient-2" />
-          <Hero />
-          <Services />
-          <About />
-          <Testimoni />
-          <Contact />
-        </section>
-      </main>
+      <LazyMotion features={domAnimation}>
+        <main className={`dark:bg-dark dark:text-light`}>
+          <Navbar theme={theme} setTheme={setTheme} />
+          <section className="container mx-auto md:px-20 px-5">
+            <div className="gradient-1" />
+            <div className="gradient-2" />
+            <Hero />
+            <Services />
+            <About />
+            <Testimoni />
+            <Contact />
+          </section>
+        </main>
+      </LazyMotion>
     </DocumentMeta>
   );
 }

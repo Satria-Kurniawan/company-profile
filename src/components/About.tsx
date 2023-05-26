@@ -1,5 +1,6 @@
 import SectionHeader from "./SectionHeader";
 import ProfilePict from "../assets/images/3d-illustration-person-with-sunglasses_23-2149436188-removebg-preview.png";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -7,7 +8,17 @@ export default function About() {
       <SectionHeader title="Tentang" subtext="Profil pemilik usaha." />
       <section className="md:flex gap-x-10 mt-16">
         <div className="md:w-[40%]">
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              duration: 0.5,
+              delay: 0.5,
+              stiffness: 300,
+              damping: 10,
+            }}
             src={ProfilePict}
             alt="profile"
             className="rounded-2xl"
@@ -15,7 +26,7 @@ export default function About() {
             height="360"
           />
         </div>
-        <div className="md:w-[60%] md:mt-32 mt-10">
+        <div className="md:w-[60%] md:mt-28 mt-10">
           <h1 className="md:text-4xl text-2xl font-bold mb-3">
             Founder AputStore
           </h1>
