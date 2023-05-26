@@ -8,6 +8,7 @@ import Img6 from "../assets/images/pexels-anna-shvets-3987020.webp";
 import Img7 from "../assets/images/pexels-cottonbro-studio-4065906.webp";
 import HeroImagesMobile from "./HeroImagesMobile";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -36,7 +37,16 @@ export default function Hero() {
         </div>
       </section>
       <section className="md:flex hidden gap-x-3 items-center w-fit mx-auto">
-        <img
+        <motion.img
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            duration: 0.5,
+            delay: 0.5,
+            stiffness: 300,
+            damping: 10,
+          }}
           src={Img6}
           alt="Laptop"
           width="160"
@@ -44,14 +54,32 @@ export default function Hero() {
           className="rounded-xl h-48"
         />
         <div className="flex flex-col gap-y-3">
-          <img
+          <motion.img
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              duration: 0.5,
+              delay: 0.5,
+              stiffness: 300,
+              damping: 10,
+            }}
             src={Img2}
             alt="Laptop"
             width="160"
             height="284.444444444"
             className="rounded-xl"
           />
-          <img
+          <motion.img
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              duration: 0.5,
+              delay: 0.5,
+              stiffness: 300,
+              damping: 10,
+            }}
             src={Img3}
             alt="Laptop"
             width="160"
@@ -59,7 +87,16 @@ export default function Hero() {
             className="rounded-xl"
           />
         </div>
-        <img
+        <motion.img
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            type: "spring",
+            duration: 0.5,
+            delay: 0.5,
+            stiffness: 300,
+            damping: 10,
+          }}
           src={Img1}
           alt="Laptop"
           width="280"
@@ -67,14 +104,32 @@ export default function Hero() {
           className="rounded-xl"
         />
         <div className="flex flex-col gap-y-3">
-          <img
+          <motion.img
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              duration: 0.5,
+              delay: 0.5,
+              stiffness: 300,
+              damping: 10,
+            }}
             src={Img4}
             alt="Laptop"
             width="160"
             height="284.444444444"
             className="rounded-xl"
           />
-          <img
+          <motion.img
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              duration: 0.5,
+              delay: 0.5,
+              stiffness: 300,
+              damping: 10,
+            }}
             src={Img5}
             alt="Laptop"
             width="160"
@@ -82,7 +137,16 @@ export default function Hero() {
             className="rounded-xl"
           />
         </div>
-        <img
+        <motion.img
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            duration: 0.5,
+            delay: 0.5,
+            stiffness: 300,
+            damping: 10,
+          }}
           src={Img7}
           alt="Laptop"
           width="160"
