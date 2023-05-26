@@ -114,7 +114,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
                   </Link>
                 </li>
               ))}
-              <div className="border py-2 px-1 rounded-full">
+              <li className="border py-2 px-1 rounded-full">
                 <span
                   className={`py-2 px-4 rounded-full font-semibold cursor-pointer ${
                     theme === "dark" && "bg-gradient-primary text-white"
@@ -131,7 +131,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
                 >
                   Light
                 </span>
-              </div>
+              </li>
             </ul>
           </div>
         </div>

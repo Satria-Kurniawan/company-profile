@@ -3,6 +3,7 @@ import { MdHealthAndSafety } from "react-icons/md";
 import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import Button from "./Button";
 import SectionHeader from "./SectionHeader";
+import { Link } from "react-scroll";
 
 type Service = {
   name: string;
@@ -62,7 +63,9 @@ export default function Services() {
               </li>
             ))}
           </ul>
-          <Button variant="primary" text="Gaskan" />
+          <Link to="kontak" smooth={true} offset={-80}>
+            <Button variant="primary" text="Gaskan" />
+          </Link>
         </div>
         <div className="md:max-w-[75%] grid md:grid-cols-3 grid-cols-1 gap-3">
           {Benefits.map((benefit, i) => (
