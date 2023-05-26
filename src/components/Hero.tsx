@@ -19,7 +19,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   };
@@ -38,18 +38,18 @@ export default function Hero() {
           animate={"visible"}
           className="font-bold md:text-5xl text-3xl text-center flex gap-x-3 flex-wrap justify-center"
         >
-          {title.split(" ").map((t) => (
+          {title.split(" ").map((char) => (
             <motion.span
               variants={titleItem}
-              transition={{ type: "spring", stiffness: 300, damping: 10 }}
-              key={t}
+              // transition={{ type: "spring", stiffness: 300, damping: 10 }}
+              key={char}
               className={`${
-                t === "gadget" &&
+                char === "gadget" &&
                 "bg-gradient-primary text-transparent bg-clip-text"
               }
               `}
             >
-              {t}
+              {char}
             </motion.span>
           ))}
           {/* Jadikan aktivitasmu lebih lancar dengan{" "}
@@ -65,17 +65,29 @@ export default function Hero() {
           dan terpercaya dengan sentuhan magis dari kami.
         </p>
         <div className="flex gap-x-2 justify-center mt-5">
-          <Link to="layanan" smooth={true} offset={-80}>
-            <Button variant="primary" text="Let's Go" />
-          </Link>
-          <Link to="kontak" smooth={true} offset={-80}>
-            <Button variant="secondary" text="Hubungi" />
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link to="layanan" smooth={true} offset={-80}>
+              <Button variant="primary" text="Let's Go" />
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 2 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link to="kontak" smooth={true} offset={-80}>
+              <Button variant="secondary" text="Hubungi" />
+            </Link>
+          </motion.div>
         </div>
       </section>
       <section className="md:flex hidden gap-x-3 items-center w-fit mx-auto">
         <motion.img
-          initial={{ x: "-100%", opacity: 0 }}
+          initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
             type: "spring",
@@ -142,7 +154,7 @@ export default function Hero() {
         />
         <div className="flex flex-col gap-y-3">
           <motion.img
-            initial={{ x: "-100%", opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
               type: "spring",
@@ -158,7 +170,7 @@ export default function Hero() {
             className="rounded-xl"
           />
           <motion.img
-            initial={{ y: "-100%", opacity: 0 }}
+            initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
               type: "spring",

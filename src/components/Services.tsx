@@ -4,6 +4,7 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import Button from "./Button";
 import SectionHeader from "./SectionHeader";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 type Service = {
   name: string;
@@ -46,6 +47,21 @@ export default function Services() {
     },
   ];
 
+  const serviceContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const serviceItem = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <main id="layanan" className="md:mt-12 min-h-screen">
       <SectionHeader
@@ -67,9 +83,21 @@ export default function Services() {
             <Button variant="primary" text="Gaskan" />
           </Link>
         </div>
-        <div className="md:max-w-[75%] grid md:grid-cols-3 grid-cols-1 gap-3">
+        <motion.div
+          variants={serviceContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="md:max-w-[75%] grid md:grid-cols-3 grid-cols-1 gap-3"
+        >
           {Benefits.map((benefit, i) => (
-            <div
+            <motion.div
+              variants={serviceItem}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 10,
+              }}
               key={i}
               className="bg-white dark:bg-dark2 rounded-2xl p-5 h-fit"
             >
@@ -80,9 +108,9 @@ export default function Services() {
               <p className="text-xs text-dark2 dark:text-light leading-5">
                 {benefit.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
     </main>
   );

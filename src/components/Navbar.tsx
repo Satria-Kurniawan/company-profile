@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 
 type Menu = {
   name: string;
@@ -31,6 +32,23 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
     document.documentElement.classList.toggle("dark", darkMode);
   };
 
+  const brand = "APUTSTORE";
+
+  const brandContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const brandItem = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
   return (
     <nav
       className={`sticky top-0 backdrop-blur-md py-3 z-50 ${
@@ -38,9 +56,17 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
       }`}
     >
       <section className="container mx-auto md:px-20 px-5 flex justify-between items-center">
-        <h1 className="brand-font bg-gradient-primary text-transparent bg-clip-text font-extrabold text-3xl">
-          APUTSTORE
-        </h1>
+        <motion.div
+          variants={brandContainer}
+          initial="hidden"
+          animate="visible"
+        >
+          <h1 className="brand-font bg-gradient-primary text-transparent bg-clip-text font-extrabold text-3xl">
+            {brand.split("").map((char) => (
+              <motion.span variants={brandItem}>{char}</motion.span>
+            ))}
+          </h1>
+        </motion.div>
         <ul className="md:flex hidden gap-x-3 items-center">
           {menus.map((menu, i) => (
             <li key={i}>
