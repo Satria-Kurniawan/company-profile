@@ -50,7 +50,7 @@ export default function Contact() {
           <div
             key={i}
             style={{ backgroundColor: contact.color }}
-            className="h-[10rem] rounded-2xl text-white flex justify-center items-center hover:brightness-75 duration-300 cursor-pointer"
+            className="h-[10rem] rounded-2xl flex justify-center items-center hover:brightness-75 duration-300 cursor-pointer"
           >
             <a href={contact.link} target="_blank">
               <div>
