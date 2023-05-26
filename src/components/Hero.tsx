@@ -11,16 +11,53 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+  const title =
+    "Jadikan aktivitasmu lebih lancar dengan gadget yang selalu siap menemani";
+
+  const titleContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const titleItem = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <main id="hero" className="md:mt-12 mt-7 md:h-[120vh] h-screen">
       <section className="md:max-w-[60vw] mx-auto mb-10">
-        <h1 className="font-bold md:text-5xl text-3xl text-center">
-          Jadikan aktivitasmu lebih lancar dengan{" "}
+        <motion.div
+          variants={titleContainer}
+          initial="hidden"
+          animate={"visible"}
+          className="font-bold md:text-5xl text-3xl text-center flex gap-x-3 flex-wrap justify-center"
+        >
+          {title.split(" ").map((t) => (
+            <motion.span
+              variants={titleItem}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+              key={t}
+              className={`${
+                t === "gadget" &&
+                "bg-gradient-primary text-transparent bg-clip-text"
+              }
+              `}
+            >
+              {t}
+            </motion.span>
+          ))}
+          {/* Jadikan aktivitasmu lebih lancar dengan{" "}
           <span className="bg-gradient-primary text-transparent bg-clip-text">
             gadget
           </span>{" "}
-          yang selalu siap menemani
-        </h1>
+          yang selalu siap menemani */}
+        </motion.div>
         <p className="text-dark2 dark:text-light text-center mt-5">
           Percayakan gadgetmu pada kami dan nikmati pengalaman teknologi yang
           mulus semulus karir Messi. Kami di sini untuk menjaga perangkat
