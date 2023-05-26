@@ -35,7 +35,7 @@ export default function Hero() {
           </Link>
         </div>
       </section>
-      <section className="flex gap-x-3 items-center w-fit mx-auto">
+      <section className="md:flex hidden gap-x-3 items-center w-fit mx-auto">
         <img
           src={Img6}
           alt="Laptop"

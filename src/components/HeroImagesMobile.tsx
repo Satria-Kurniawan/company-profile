@@ -18,14 +18,14 @@ export default function HeroImagesMobile() {
           alt="Laptop"
           width="280"
           height="157.5"
-          className="rounded-xl rounded-l-none"
+          className="rounded-tr-xl"
         />
         <img
           src={Img3}
           alt="Laptop"
           width="280"
           height="157.5"
-          className="rounded-xl rounded-l-none"
+          className="rounded-br-xl"
         />
       </section>
     </main>
