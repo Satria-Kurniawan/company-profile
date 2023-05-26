@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Testimoni from "./components/Testimoni";
+import DocumentMeta from "react-document-meta";
 
 export default function App() {
   const [theme, setTheme] = useState<string>("light");
@@ -21,18 +22,33 @@ export default function App() {
     }
   }, []);
 
+  const meta = {
+    title: "APUTSTORE",
+    description:
+      "Tempat servis handphone, smartphone, laptop, dan perangkat elerktronik lainnya termurah, terbaik.",
+    canonical: "https://edistore.vercel.app",
+    meta: {
+      charset: "utf-8",
+      name: {
+        keywords: "servis gadget, laptop, smartphone",
+      },
+    },
+  };
+
   return (
-    <main className={`dark:bg-dark dark:text-light`}>
-      <Navbar theme={theme} setTheme={setTheme} />
-      <section className="container mx-auto md:px-20 px-5">
-        <div className="gradient-1" />
-        <div className="gradient-2" />
-        <Hero />
-        <Services />
-        <About />
-        <Testimoni />
-        <Contact />
-      </section>
-    </main>
+    <DocumentMeta {...meta}>
+      <main className={`dark:bg-dark dark:text-light`}>
+        <Navbar theme={theme} setTheme={setTheme} />
+        <section className="container mx-auto md:px-20 px-5">
+          <div className="gradient-1" />
+          <div className="gradient-2" />
+          <Hero />
+          <Services />
+          <About />
+          <Testimoni />
+          <Contact />
+        </section>
+      </main>
+    </DocumentMeta>
   );
 }
