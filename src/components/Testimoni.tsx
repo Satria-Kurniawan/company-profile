@@ -43,7 +43,9 @@ export default function Testimoni() {
               </h1>
               <div>
                 <MdFormatQuote size={30} />
-                <span className="text-label">{testimoni.text}</span>
+                <span className="text-dark2 dark:text-light">
+                  {testimoni.text}
+                </span>
                 <MdFormatQuote size={30} className="ml-auto" />
               </div>
             </div>

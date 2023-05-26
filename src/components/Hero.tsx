@@ -11,7 +11,7 @@ import { Link } from "react-scroll";
 
 export default function Hero() {
   return (
-    <main className="md:mt-12 mt-7 md:h-[120vh] h-screen">
+    <main id="hero" className="md:mt-12 mt-7 md:h-[120vh] h-screen">
       <section className="md:max-w-[60vw] mx-auto mb-10">
         <h1 className="font-bold md:text-5xl text-3xl text-center">
           Jadikan aktivitasmu lebih lancar dengan{" "}
@@ -20,7 +20,7 @@ export default function Hero() {
           </span>{" "}
           yang selalu siap menemani
         </h1>
-        <p className="text-label text-center mt-5">
+        <p className="text-dark2 dark:text-light text-center mt-5">
           Percayakan gadgetmu pada kami dan nikmati pengalaman teknologi yang
           mulus semulus karir Messi. Kami di sini untuk menjaga perangkat
           elektronikmu tetap berfungsi dengan sempurna. Dapatkan solusi cepat

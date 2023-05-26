@@ -43,23 +43,24 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
         </h1>
         <ul className="md:flex hidden gap-x-3 items-center">
           {menus.map((menu, i) => (
-            <Link
-              to={menu.link}
-              smooth={true}
-              spy={true}
-              offset={-80}
-              onSetActive={() => setActiveMenu(menu.name)}
-            >
-              <li
-                key={i}
-                className={`relative cursor-pointer py-2 px-3 font-medium hover:bg-gray-50 dark:hover:text-primary ${
-                  activeMenu === menu.name &&
-                  "bg-gradient-primary bg-clip-text text-transparent"
-                }`}
+            <li key={i}>
+              <Link
+                to={menu.link}
+                smooth={true}
+                spy={true}
+                offset={-80}
+                onSetActive={() => setActiveMenu(menu.name)}
               >
-                {menu.name}
-              </li>
-            </Link>
+                <div
+                  className={`relative cursor-pointer py-2 px-3 font-medium hover:bg-gray-50 dark:hover:text-primary ${
+                    activeMenu === menu.name &&
+                    "bg-gradient-primary bg-clip-text text-transparent"
+                  }`}
+                >
+                  {menu.name}
+                </div>
+              </Link>
+            </li>
           ))}
           <div className="border py-2 px-1 rounded-full">
             <span
@@ -94,23 +95,24 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
           >
             <ul className="flex flex-col gap-y-10 w-fit mx-auto">
               {menus.map((menu, i) => (
-                <Link
-                  to={menu.link}
-                  smooth={true}
-                  spy={true}
-                  offset={-80}
-                  onSetActive={() => setActiveMenu(menu.name)}
-                >
-                  <li
-                    key={i}
-                    className={`text-center font-semibold cursor-pointer ${
-                      activeMenu === menu.name &&
-                      "bg-gradient-primary bg-clip-text text-transparent"
-                    }`}
+                <li key={i}>
+                  <Link
+                    to={menu.link}
+                    smooth={true}
+                    spy={true}
+                    offset={-80}
+                    onSetActive={() => setActiveMenu(menu.name)}
                   >
-                    {menu.name}
-                  </li>
-                </Link>
+                    <div
+                      className={`text-center font-semibold cursor-pointer ${
+                        activeMenu === menu.name &&
+                        "bg-gradient-primary bg-clip-text text-transparent"
+                      }`}
+                    >
+                      {menu.name}
+                    </div>
+                  </Link>
+                </li>
               ))}
               <div className="border py-2 px-1 rounded-full">
                 <span

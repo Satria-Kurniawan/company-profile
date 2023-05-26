@@ -23,7 +23,7 @@ export default function About() {
           <div className="h-1 w-20 bg-gradient-primary rounded-full mt-3 mb-5" />
           <div className="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5">
             <div>
-              <p className="text-label">
+              <p className="text-dark2 dark:text-light">
                 Sejak kecil, aku sudah tertarik dengan dunia teknologi dan
                 bercita-cita menjadi pahlawan bagi semua gadget yang bermasalah.
                 Jadi, aku memutuskan untuk mengambil risiko dan membuka bisnis
@@ -31,7 +31,7 @@ export default function About() {
               </p>
             </div>
             <div>
-              <p className="text-label">
+              <p className="text-dark2 dark:text-light">
                 Dari layar retak yang terlihat seperti mozaik modern, baterai
                 yang menguap seperti asap sosis bakar, hingga masalah software
                 yang bikin perangkatmu bingung seperti kucing yang kehilangan

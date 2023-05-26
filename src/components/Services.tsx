@@ -74,7 +74,7 @@ export default function Services() {
                 {benefit.icon}
               </div>
               <h1 className="text-lg font-bold">{benefit.title}</h1>
-              <p className="text-xs text-label leading-5">
+              <p className="text-xs text-dark2 dark:text-light leading-5">
                 {benefit.description}
               </p>
             </div>
