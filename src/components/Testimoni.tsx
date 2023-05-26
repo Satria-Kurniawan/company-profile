@@ -1,3 +1,4 @@
+import { FaUserCircle } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
 import { MdFormatQuote } from "react-icons/md";
 
@@ -33,11 +34,7 @@ export default function Testimoni() {
         {testimonies.map((testimoni, i) => (
           <div key={i} className="bg-white dark:bg-dark2 rounded-2xl p-5 h-fit">
             <div>
-              <img
-                src={testimoni.avatar}
-                alt="Profile"
-                className="rounded-full w-14 h-14 mx-auto mb-3"
-              />
+              <FaUserCircle size={50} className="mx-auto mb-3" />
               <h1 className="font-bold text-center mb-5 bg-gradient-primary bg-clip-text text-transparent">
                 {testimoni.customer}
               </h1>

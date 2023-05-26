@@ -49,7 +49,7 @@ export default function Hero() {
             alt="Laptop"
             width="160"
             height="284.444444444"
-            className="rounded-xl h-44"
+            className="rounded-xl"
           />
           <img
             src={Img3}
@@ -72,7 +72,7 @@ export default function Hero() {
             alt="Laptop"
             width="160"
             height="284.444444444"
-            className="rounded-xl h-44"
+            className="rounded-xl"
           />
           <img
             src={Img5}
