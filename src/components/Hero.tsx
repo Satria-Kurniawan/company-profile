@@ -8,7 +8,6 @@ import Img6 from "../assets/images/pexels-anna-shvets-3987020.webp";
 import Img7 from "../assets/images/pexels-cottonbro-studio-4065906.webp";
 import HeroImagesMobile from "./HeroImagesMobile";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -61,15 +60,6 @@ export default function Hero() {
           />
         </div>
         <img
-          initial={{ y: "-100%" }}
-          animate={{ y: 0 }}
-          transition={{
-            type: "spring",
-            duration: 1,
-            delay: 0.5,
-            stiffness: 300,
-            damping: 10,
-          }}
           src={Img1}
           alt="Laptop"
           width="280"
