@@ -32,7 +32,7 @@ export default function Navbar({ theme, setTheme }: NavbarProps) {
     document.documentElement.classList.toggle("dark", darkMode);
   };
 
-  const brand = "APUTSTORE";
+  const brand = "EDSTORE";
 
   const brandContainer = {
     hidden: { opacity: 0 },

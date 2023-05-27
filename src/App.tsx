@@ -24,7 +24,7 @@ export default function App() {
   }, []);
 
   const meta = {
-    title: "APUTSTORE",
+    title: "EDSTORE",
     description:
       "Tempat servis handphone, smartphone, laptop, dan perangkat elerktronik lainnya termurah, terbaik.",
     canonical: "https://edistore.vercel.app",

@@ -80,6 +80,7 @@ export default function Services() {
             variants={serviceContainer}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="flex flex-col gap-y-3 mb-5"
           >
             {services.map((service, i) => (

@@ -28,7 +28,7 @@ export default function About() {
         </div>
         <div className="md:w-[60%] md:mt-28 mt-10">
           <h1 className="md:text-4xl text-2xl font-bold mb-3">
-            Founder AputStore
+            Founder EdStore
           </h1>
           <h2 className="text-xl font-semibold mb-3">Edi Narendra</h2>
           <div className="h-1 w-20 bg-gradient-primary rounded-full mt-3 mb-5" />
